@@ -1,228 +1,294 @@
+import Icon from "@/components/ui/icon";
+
+const services = [
+  {
+    tag: "Точно",
+    tagBg: "var(--primary)",
+    icon: "Search",
+    title: "Компьютерная диагностика",
+    desc: "Полная проверка узлов авто на современном оборудовании. Найдём причину поломки за 30 минут.",
+    price: "от 800 ₽",
+  },
+  {
+    tag: "Хит",
+    tagBg: "var(--secondary)",
+    icon: "Wrench",
+    title: "Ремонт двигателя",
+    desc: "Капитальный и текущий ремонт ДВС, замена ГРМ, ремонт трансмиссии и подвески. Гарантия на работы.",
+    price: "от 3 000 ₽",
+  },
+  {
+    tag: "Выгодно",
+    tagBg: "var(--accent)",
+    tagColor: "var(--dark)",
+    icon: "Droplet",
+    title: "ТО и замена масла",
+    desc: "Плановое техобслуживание, замена масла, фильтров и расходников. Запчасти в наличии и под заказ.",
+    price: "от 600 ₽",
+  },
+  {
+    tag: "Лето",
+    tagBg: "var(--secondary)",
+    icon: "Snowflake",
+    title: "Ремонт кондиционеров",
+    desc: "Заправка, диагностика и ремонт автокондиционеров. Чистый и холодный воздух в салоне.",
+    price: "от 1 500 ₽",
+  },
+  {
+    tag: "Мощь",
+    tagBg: "var(--primary)",
+    icon: "Cpu",
+    title: "Чип-тюнинг",
+    desc: "Прошивка блоков управления, увеличение мощности и снижение расхода топлива. Безопасно для двигателя.",
+    price: "от 5 000 ₽",
+  },
+  {
+    tag: "Электрик",
+    tagBg: "var(--accent)",
+    tagColor: "var(--dark)",
+    icon: "Zap",
+    title: "Автоэлектрика",
+    desc: "Диагностика и ремонт электрики, проводки, стартеров и генераторов любых марок авто.",
+    price: "от 700 ₽",
+  },
+];
+
+const reviews = [
+  {
+    name: "Ильдар, Lada Vesta",
+    text: "Привёз машину с непонятным стуком — за час нашли проблему и устранили. Цена честная, всё объяснили. Рекомендую!",
+  },
+  {
+    name: "Марина, Kia Rio",
+    text: "Делала ТО и замену масла. Быстро, аккуратно, без навязывания лишних услуг. Теперь только сюда.",
+  },
+  {
+    name: "Андрей, таксопарк",
+    text: "Обслуживаем здесь весь автопарк. Запчасти всегда в наличии, машины не простаивают. Надёжные ребята.",
+  },
+];
+
 export default function Index() {
   return (
     <>
       <div className="grain-overlay" />
 
       <header className="header">
-        <div className="logo">VINYL*DINER</div>
+        <div className="logo">
+          АВТО<span style={{ color: "var(--primary)" }}>+</span>ДОКТОР
+        </div>
         <nav>
-          <a href="#">Меню</a>
-          <a href="#">О нас</a>
-          <a href="#">Афиша</a>
-          <a href="#">Адреса</a>
+          <a href="#services">Услуги</a>
+          <a href="#about">О нас</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contacts">Контакты</a>
         </nav>
-        <button className="btn-cta">Забронировать</button>
+        <a href="tel:+79273149314" className="btn-cta">
+          Позвонить
+        </a>
       </header>
 
       <main>
         <section className="hero">
           <div className="hero-content">
             <h1 className="hero-title">
-              БЕЗ ПОНТОВ,
+              ДОВЕРЬ АВТО
               <br />
-              ТОЛЬКО <span>ВКУС</span>
+              <span>ПРОФЕССИОНАЛАМ</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-[#555]">
-              Эстетика 70-х в современной подаче. Локальные продукты, огненные блюда и атмосфера для настоящих ценителей.
+              Профессиональный ремонт и обслуживание авто в Туймазах. Современное оборудование, опытные мастера и
+              прозрачные цены.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
-              <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }}>
-                Заказать
-              </button>
-              <button className="btn-cta" style={{ background: "white" }}>
-                Смотреть меню
-              </button>
+              <a
+                href="tel:+79273149314"
+                className="btn-cta"
+                style={{ background: "var(--primary)", color: "white" }}
+              >
+                Узнать цену
+              </a>
+              <a href="#services" className="btn-cta" style={{ background: "white" }}>
+                Все услуги
+              </a>
             </div>
           </div>
           <div className="hero-img">
             <div className="sticker">
-              СВЕЖАК
+              ГАРАНТИЯ
               <br />
-              КАЖДЫЙ ДЕНЬ
+              НА РАБОТЫ
             </div>
             <div className="floating-tag hidden md:block" style={{ top: "20%", left: "10%" }}>
-              #ЭСТЕТИКА
+              #ТУЙМАЗЫ
             </div>
             <div className="floating-tag hidden md:block" style={{ bottom: "30%", right: "20%" }}>
-              ОГОНЬ
+              ЧЕСТНО
             </div>
           </div>
         </section>
 
         <div className="marquee">
           <div className="marquee-content">
-            &nbsp; * БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ *
-            БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ
+            &nbsp; * ДИАГНОСТИКА * РЕМОНТ ДВИГАТЕЛЯ * ЗАМЕНА МАСЛА * АВТОЭЛЕКТРИКА * ЗАПРАВКА КОНДИЦИОНЕРОВ * ЧИП-ТЮНИНГ *
+            ЗАПЧАСТИ В НАЛИЧИИ * ДИАГНОСТИКА * РЕМОНТ ДВИГАТЕЛЯ * ЗАМЕНА МАСЛА * АВТОЭЛЕКТРИКА * ЗАПРАВКА КОНДИЦИОНЕРОВ
           </div>
         </div>
 
         <section className="section-padding">
           <div className="section-header">
-            <h2 className="section-title">ВЫБОР ШЕФА</h2>
+            <h2 className="section-title">ПОЧЕМУ МЫ</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {[
+              { icon: "Cog", title: "Современное оборудование", text: "Точная диагностика и ремонт любой сложности." },
+              { icon: "Award", title: "Опытные мастера", text: "Команда профессионалов со стажем более 10 лет." },
+              { icon: "Package", title: "Запчасти в наличии", text: "Оригинал и аналоги в наличии и под заказ." },
+              { icon: "ShieldCheck", title: "Гарантия и прозрачность", text: "Честные цены и гарантия на все работы." },
+            ].map((item) => (
+              <div
+                key={item.title}
+                style={{ border: "var(--border)", background: "white", padding: "24px" }}
+              >
+                <div
+                  style={{
+                    width: "56px",
+                    height: "56px",
+                    background: "var(--accent)",
+                    border: "var(--border)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <Icon name={item.icon} size={28} />
+                </div>
+                <h3 style={{ fontWeight: 800, fontSize: "18px", marginBottom: "8px", textTransform: "uppercase" }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: "14px", color: "#666", lineHeight: 1.5 }}>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="services" className="section-padding" style={{ borderTop: "var(--border)" }}>
+          <div className="section-header">
+            <h2 className="section-title">УСЛУГИ И ЦЕНЫ</h2>
             <a
-              href="#"
+              href="tel:+79273149314"
               className="text-sm md:text-base"
               style={{ color: "var(--dark)", fontWeight: 800, textTransform: "uppercase" }}
             >
-              Всё меню
+              Записаться
             </a>
           </div>
 
           <div className="menu-grid">
-            {/* Item 1 */}
-            <div className="menu-card">
-              <span className="menu-tag">Хит продаж</span>
-              <img
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Классический бургер"
-              />
-              <div className="menu-card-body">
+            {services.map((s) => (
+              <div className="menu-card" key={s.title}>
+                <span className="menu-tag" style={{ background: s.tagBg, color: s.tagColor || "white" }}>
+                  {s.tag}
+                </span>
                 <div
                   style={{
+                    height: "200px",
+                    background: "var(--dark)",
+                    borderBottom: "var(--border)",
                     display: "flex",
-                    justifyContent: "space-between",
                     alignItems: "center",
-                    marginBottom: "10px",
+                    justifyContent: "center",
                   }}
                 >
-                  <h3>Классика</h3>
-                  <span className="price">1 400 ₽</span>
+                  <Icon name={s.icon} size={72} style={{ color: "var(--accent)" }} />
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  Тройной смэш из мраморной говядины, фирменный соус, маринованные огурцы на бриоши.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 2 */}
-            <div className="menu-card">
-              <span className="menu-tag" style={{ background: "var(--secondary)" }}>
-                Острое
-              </span>
-              <img
-                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Неоновая пицца"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Электро Пепперони</h3>
-                  <span className="price">1 800 ₽</span>
+                <div className="menu-card-body">
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      marginBottom: "10px",
+                      gap: "10px",
+                    }}
+                  >
+                    <h3 style={{ fontWeight: 800, textTransform: "uppercase", fontSize: "17px" }}>{s.title}</h3>
+                    <span className="price" style={{ whiteSpace: "nowrap" }}>
+                      {s.price}
+                    </span>
+                  </div>
+                  <p style={{ fontSize: "14px", color: "#666" }}>{s.desc}</p>
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>Двойная пепперони, острый мёд, тесто на закваске.</p>
               </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="menu-card">
-              <span className="menu-tag" style={{ background: "var(--accent)", color: "var(--dark)" }}>
-                Популярное
-              </span>
-              <img
-                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Диско Сауэр"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Диско Сауэр</h3>
-                  <span className="price">1 200 ₽</span>
-                </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  Джин, цветок бузины, голубой чай и съедобная золотая пыльца.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        <section className="retro-vibe">
+        <section id="about" className="retro-vibe">
           <div>
-            <h2 className="vibe-title">ВАЙБ-ЧЕК ПРОЙДЕН.</h2>
+            <h2 className="vibe-title">ВАШ АВТОМОБИЛЬ В НАДЁЖНЫХ РУКАХ</h2>
             <p className="vibe-text">
-              Мы не просто кормим. Мы создаём моменты. От плейлиста хип-хопа 90-х до диванов в стиле 70-х — каждый уголок
-              продуман для твоего идеального кадра. Бронь не нужна, просто приходи с настроением.
+              «Автодоктор» — это команда мастеров, которая лечит любые автомобильные «болезни». Мы работаем с
+              отечественными и импортными марками, обслуживаем частных клиентов и автопарки. Честная диагностика,
+              качественные запчасти и гарантия на каждую работу.
             </p>
-            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }}>
-              Наша история
-            </button>
+            <a
+              href="tel:+79273149314"
+              className="btn-cta"
+              style={{ background: "var(--dark)", color: "white", borderColor: "white" }}
+            >
+              Записаться на ремонт
+            </a>
           </div>
-          <div className="vibe-img"></div>
+          <div
+            className="vibe-img"
+            style={{
+              background:
+                "url('https://cdn.poehali.dev/projects/f73850e3-8149-4465-86e4-9d06b33cfb6a/files/f7299c96-390b-4669-be88-c0e392b63b58.jpg') center center / cover",
+            }}
+          ></div>
         </section>
 
-        <section className="section-padding">
+        <section id="reviews" className="section-padding">
           <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
-            @VINYL.DINER
+            ОТЗЫВЫ КЛИЕНТОВ
           </h2>
-          <div className="social-grid">
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 1"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 2"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 3"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 4"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {reviews.map((r) => (
+              <div key={r.name} style={{ border: "var(--border)", background: "white", padding: "28px" }}>
+                <div style={{ display: "flex", gap: "4px", marginBottom: "14px" }}>
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={18} style={{ color: "var(--accent)", fill: "var(--accent)" }} />
+                  ))}
+                </div>
+                <p style={{ fontSize: "15px", lineHeight: 1.6, marginBottom: "16px", fontStyle: "italic" }}>
+                  «{r.text}»
+                </p>
+                <span style={{ fontWeight: 800, textTransform: "uppercase", fontSize: "14px" }}>{r.name}</span>
+              </div>
+            ))}
           </div>
         </section>
       </main>
 
-      <footer>
+      <footer id="contacts">
         <div>
-          <div className="footer-logo">VINYL*DINER</div>
+          <div className="footer-logo">
+            АВТО<span style={{ color: "var(--primary)" }}>+</span>ДОКТОР
+          </div>
           <p style={{ color: "#666", lineHeight: 1.6 }}>
-            Твоё место для еды высокого качества и лоу-фай атмосферы. С 2024, но ощущается как 1974.
+            Профессиональный автосервис в Туймазах. Доверь свой автомобиль профессионалам — ремонт, диагностика и
+            обслуживание любых марок.
           </p>
         </div>
         <div className="footer-links">
-          <h4>Навигация</h4>
+          <h4>Контакты</h4>
           <ul>
+            <li>г. Туймазы, ул. 70 лет Октября, 26/6</li>
             <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Меню
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                О нас
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Политика
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Условия
+              <a href="tel:+79273149314" style={{ color: "inherit", textDecoration: "none" }}>
+                +7 (927) 314-93-14
               </a>
             </li>
           </ul>
@@ -230,16 +296,15 @@ export default function Index() {
         <div className="footer-links">
           <h4>Часы работы</h4>
           <ul>
-            <li>Вт-Чт: 12:00 - 23:00</li>
-            <li>Пт-Сб: 12:00 - 02:00</li>
-            <li>Вс: 11:00 - 21:00</li>
-            <li>Пн: Выходной</li>
+            <li>Пн-Пт: 09:00 - 19:00</li>
+            <li>Сб: 09:00 - 16:00</li>
+            <li>Вс: Выходной</li>
           </ul>
         </div>
         <div className="footer-bottom">
-          <span>2025 VINYL DINER</span>
-          <span>ВКУС КЛАССИКИ</span>
-          <span>IG / TW / TK</span>
+          <span>2025 АВТОДОКТОР</span>
+          <span>ДОВЕРЬ СВОЙ АВТОМОБИЛЬ ПРОФЕССИОНАЛАМ</span>
+          <span>ТУЙМАЗЫ</span>
         </div>
       </footer>
     </>
