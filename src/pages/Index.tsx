@@ -91,6 +91,11 @@ export default function Index() {
       <main>
         <section className="hero">
           <div className="hero-content">
+            <img
+              src="https://cdn.poehali.dev/files/a9ff0589-ce4a-4200-94db-94ba648c38bc.jpeg"
+              alt="Автодоктор"
+              style={{ width: "220px", marginBottom: "24px", border: "var(--border)", boxShadow: "var(--shadow)" }}
+            />
             <h1 className="hero-title">
               ДОВЕРЬ АВТО
               <br />
