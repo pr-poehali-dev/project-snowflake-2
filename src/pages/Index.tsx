@@ -75,7 +75,11 @@ export default function Index() {
 
       <header className="header">
         <div className="logo">
-          АВТО<span style={{ color: "var(--primary)" }}>+</span>ДОКТОР
+          <img
+            src="https://cdn.poehali.dev/files/a9ff0589-ce4a-4200-94db-94ba648c38bc.jpeg"
+            alt="Автодоктор"
+            style={{ height: "52px", width: "auto" }}
+          />
         </div>
         <nav>
           <a href="#services">Услуги</a>
