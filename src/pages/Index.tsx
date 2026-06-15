@@ -254,7 +254,7 @@ export default function Index() {
             className="vibe-img"
             style={{
               background:
-                "url('https://cdn.poehali.dev/projects/f73850e3-8149-4465-86e4-9d06b33cfb6a/files/f7299c96-390b-4669-be88-c0e392b63b58.jpg') center center / cover",
+                "url('https://cdn.poehali.dev/projects/f73850e3-8149-4465-86e4-9d06b33cfb6a/bucket/216190c4-e8d4-4374-9b6e-3345ab5fa40c.jpg') center center / cover",
             }}
           ></div>
         </section>
